@@ -65,7 +65,7 @@ function ulFan(text, count) {
 ulFan('Cool', 3)
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-function write(arr) {
+const write = (arr) =>{
     document.write(`<ul>`);
     for (const arrElement of arr) {
         document.write(`<li>${arrElement}</li>`);
@@ -89,7 +89,7 @@ let peoples = [
     {id: 11, name: 'max', age: 31, status: true},
 ];
 
-function users() {
+let users = () =>{
     for (const people of peoples) {
         document.write(`
         <div>
@@ -105,7 +105,17 @@ function users() {
 
 users(peoples)
 // - створити функцію яка повертає найменьше число з масиву
+function nam (number) {
+    let min = number[0];
+    for (let i = 1; i < number.length; i++) {
+        if (number[i] < min) {
+            min = number[i];
+        }
+    }
+    return min;
+}
 
+console.log(`nam=`, nam([33, 24, 77, 64, 3535]));
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 // function sum(a, b, c) {
 //     return result = a + b + c;
